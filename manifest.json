@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Meme blocker",
+    "description": "Avoid spoilers, block memes",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.facebook.com/"
+            ],
+            "js": [
+                "Content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ]
+}
